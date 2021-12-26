@@ -1,0 +1,28 @@
+---
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - [./preinstall.sh, Install Oh-My-Zsh]
+
+
+- link:
+    ~/.bashrc: bashrc
+    ~/.themes: themes
+    ~/.config/kitty/kitty-themes/themes/Dracula.conf :
+      create: true
+      path: kitty/Dracula.conf
+    ~/.config/kitty/kitty.conf: kitty/kitty.conf
+    ~/.fonts: fonts
+    ~/.zshrc: zsh/zshrc
+    ~/.oh-my-zsh/themes/dracula.zsh-theme:
+      create: true
+      path: zsh/zshtheme/dracula.zsh-theme
+
+- create:
+    - ~/Projects
+
