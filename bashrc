@@ -31,3 +31,11 @@ export EDITOR='/usr/bin/vim'
 export VISUAL='/usr/bin/vim'
 
 export GOPATH=$HOME/Go
+
+
+
+# ----------------------------------------------------------
+# Alias'
+# ----------------------------------------------------------
+alias vim=nvim
+
