@@ -52,3 +52,8 @@ noremap <Leader>gf :e <cfile><CR>
 map <Leader>nt :NERDTreeToggle<CR>
 map <Leader>nf :NERDTreeFocus<CR>
 
+map <Leader><Up> :tabr<CR>
+map <Leader><Down> :tabl<CR>
+map <Leader><Left> :tabp<CR>
+map <Leader><Right> :tabn<CR>
+
