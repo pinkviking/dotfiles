@@ -2,6 +2,7 @@
 " Options
 " -------------------------------------------------------------------
 set nocompatible            " disable compatibility to old-time vi
+set hidden
 set showmatch               " show matching
 set ignorecase              " case insensitive
 set mouse=v                 " middle-click paste with
@@ -39,6 +40,7 @@ call plug#begin("~/.vim/plugged")
  source ~/.config/nvim/plugins/vim-fugitive.vim
  source ~/.config/nvim/plugins/nerdtree.vim
  source ~/.config/nvim/plugins/vim-airline.vim
+ source ~/.config/nvim/plugins/fzf.vim
  source ~/.config/nvim/plugins/vim-devicons
 call plug#end()
 
@@ -52,8 +54,12 @@ noremap <Leader>gf :e <cfile><CR>
 map <Leader>nt :NERDTreeToggle<CR>
 map <Leader>nf :NERDTreeFocus<CR>
 
-map <Leader><Up> :tabr<CR>
-map <Leader><Down> :tabl<CR>
-map <Leader><Left> :tabp<CR>
-map <Leader><Right> :tabn<CR>
+noremap <Leader>ff :Files<CR>
+noremap <Leader>fw :Windows<CR>
+noremap <Leader>fb :Buffers<CR>
+
+map <Leader>j :tabr<CR>
+map <Leader>k :tabl<CR>
+map <Leader>h :tabp<CR>
+map <Leader>l :tabn<CR>
 
