@@ -27,8 +27,8 @@ fi
 unset rc
 
 
-export EDITOR='/usr/bin/vim'
-export VISUAL='/usr/bin/vim'
+export EDITOR='/usr/bin/nvim'
+export VISUAL='/usr/bin/nvim'
 
 export GOPATH=$HOME/Go
 

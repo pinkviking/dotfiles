@@ -7,7 +7,7 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-  - [./preinstall.sh, Install Oh-My-Zsh]
+  - [./preinstall.sh, Running preinstallation script ]
 
 - create:
   - ~/.config/nvim
@@ -20,6 +20,7 @@
     ~/.config/kitty/kitty-themes/themes/Dracula.conf: kitty/Dracula.conf
     ~/.config/kitty/kitty.conf: kitty/kitty.conf
     ~/.config/nvim/init.vim: nvim/init.vim
+    ~/.config/nvim/plugins: nvim/plugins
     ~/.fonts: fonts
     ~/.zshrc: zsh/zshrc
     ~/.oh-my-zsh/themes/dracula.zsh-theme: zsh/zshtheme/dracula.zsh-theme

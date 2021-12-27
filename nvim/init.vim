@@ -26,6 +26,8 @@ set ttyfast                 " Speed up scrolling in Vim
 " set noswapfile            " disable creating swap file
 " set backupdir=~/.cache/vim " Directory to store backup files.
 
+set splitright
+set splitbelow
 
 " -------------------------------------------------------------------
 " Plugins
@@ -37,7 +39,7 @@ call plug#begin("~/.vim/plugged")
  Plug 'preservim/nerdcommenter'
  Plug 'mhinz/vim-startify'
  Plug 'tpope/vim-fugitive'
- Plug 'vim-airline/vim-airline'
+ source ~/.config/nvim/plugins/vim-airline.vim
 call plug#end()
 
 " -------------------------------------------------------------------
