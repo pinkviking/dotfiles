@@ -2,12 +2,12 @@
 " Options
 " -------------------------------------------------------------------
 set nocompatible            " disable compatibility to old-time vi
-set showmatch               " show matching 
-set ignorecase              " case insensitive 
-set mouse=v                 " middle-click paste with 
-set hlsearch                " highlight search 
+set showmatch               " show matching
+set ignorecase              " case insensitive
+set mouse=v                 " middle-click paste with
+set hlsearch                " highlight search
 set incsearch               " incremental search
-set tabstop=4               " number of columns occupied by a tab 
+set tabstop=4               " number of columns occupied by a tab
 set softtabstop=4           " see multiple spaces as tabstops so <BS> does the right thing
 set expandtab               " converts tabs to white space
 set shiftwidth=4            " width for autoindents
@@ -33,17 +33,22 @@ set splitbelow
 " Plugins
 " -------------------------------------------------------------------
 call plug#begin("~/.vim/plugged")
- Plug 'dracula/vim'
- Plug 'ryanoasis/vim-devicons'
- Plug 'scrooloose/nerdtree'
- Plug 'preservim/nerdcommenter'
- Plug 'mhinz/vim-startify'
- Plug 'tpope/vim-fugitive'
+ source ~/.config/nvim/plugins/dracula.vim
+ source ~/.config/nvim/plugins/nerdcommenter.vim
+ source ~/.config/nvim/plugins/vim-startify.vim
+ source ~/.config/nvim/plugins/vim-fugitive.vim
+ source ~/.config/nvim/plugins/nerdtree.vim
  source ~/.config/nvim/plugins/vim-airline.vim
+ source ~/.config/nvim/plugins/vim-devicons
 call plug#end()
 
 " -------------------------------------------------------------------
 " Mappings
 " -------------------------------------------------------------------
 let mapleader = ' '
+
+noremap <Leader>gf :e <cfile><CR>
+
+map <Leader>nt :NERDTreeToggle<CR>
+map <Leader>nf :NERDTreeFocus<CR>
 
