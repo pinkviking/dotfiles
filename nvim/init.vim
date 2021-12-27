@@ -42,6 +42,7 @@ call plug#begin("~/.vim/plugged")
  source ~/.config/nvim/plugins/vim-airline.vim
  source ~/.config/nvim/plugins/floaterm.vim
  source ~/.config/nvim/plugins/fzf.vim
+ source ~/.config/nvim/plugins/coc.vim
  source ~/.config/nvim/plugins/vim-devicons
 call plug#end()
 
@@ -49,6 +50,8 @@ call plug#end()
 " Mappings
 " -------------------------------------------------------------------
 let mapleader = ' '
+
+noremap <Leader>qq :q!<CR>
 
 noremap <Leader>gf :e <cfile><CR>
 
