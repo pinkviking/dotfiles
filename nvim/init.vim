@@ -40,6 +40,7 @@ call plug#begin("~/.vim/plugged")
  source ~/.config/nvim/plugins/vim-fugitive.vim
  source ~/.config/nvim/plugins/nerdtree.vim
  source ~/.config/nvim/plugins/vim-airline.vim
+ source ~/.config/nvim/plugins/floaterm.vim
  source ~/.config/nvim/plugins/fzf.vim
  source ~/.config/nvim/plugins/vim-devicons
 call plug#end()
@@ -62,4 +63,9 @@ map <Leader>j :tabr<CR>
 map <Leader>k :tabl<CR>
 map <Leader>h :tabp<CR>
 map <Leader>l :tabn<CR>
+
+let g:floaterm_keymap_new    = '<Leader>tw'
+let g:floaterm_keymap_prev   = '<Leader>tp'
+let g:floaterm_keymap_next   = '<Leader>tn'
+let g:floaterm_keymap_toggle = '<Leader>tt'
 
