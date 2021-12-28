@@ -33,7 +33,7 @@ set splitbelow
 " -------------------------------------------------------------------
 " Plugins
 " -------------------------------------------------------------------
-call plug#begin("~/.vim/plugged")
+call plug#begin("~/.config/nvim/plugged")
  source ~/.config/nvim/plugins/dracula.vim
  source ~/.config/nvim/plugins/nerdcommenter.vim
  source ~/.config/nvim/plugins/vim-startify.vim

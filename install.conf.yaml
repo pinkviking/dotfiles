@@ -11,6 +11,7 @@
 
 - create:
   - ~/.config/nvim
+  - ~/.config/nvim/plugged
   - ~/.config/kitty/kitty-themes/themes
   - ~/.oh-my-zsh/themes
 
