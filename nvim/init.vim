@@ -72,3 +72,7 @@ let g:floaterm_keymap_prev   = '<Leader>tp'
 let g:floaterm_keymap_next   = '<Leader>tn'
 let g:floaterm_keymap_toggle = '<Leader>tt'
 
+if filereadable(expand("~/.config/nvim/local.vim"))
+    source ~/.config/nvim/local.vim
+endif
+
