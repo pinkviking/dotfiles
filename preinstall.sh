@@ -2,8 +2,9 @@
 
 # Install Oh-My-Zsh
 if [ "$ZSH" == "" -a -f "/bin/bash" ]; then
+    rm -rf ~/.oh-my-zsh
     echo "Installing Oh-My-Zsh"
-    sh  -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 fi
 
 # Install vimplug
@@ -16,4 +17,11 @@ if [ ! -f "$vimplug" ]; then
         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 fi
 
+if [ -f ~/.zshrc ]; then
+    if [ ! -L ~/.zshrc ]; then rm ~/.zshrc; fi
+fi
+
+if [ -f ~/.bashrc ]; then
+    if [ ! -L ~/.bashrc ]; then rm ~/.bashrc; fi
+fi
 
