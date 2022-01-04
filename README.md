@@ -4,11 +4,10 @@ Heima er best.
 
 ## Init
 
-* Install packages [zsh, neovim]
-* Remove vim (if installed)
+* Install packages [zsh, vim, kitty, nodejs]
 * Run `./install`
-* nvim config:
+* vim config:
     * `:PlugInstall` # Install Plugins
     * `:CocInstall coc-snippets` # Optional
-    * Local config can be added to file _~/.config/nvim/local.vim_
+    * Local config can be added to file _~/.vim/local.vim_
 

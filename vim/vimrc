@@ -33,17 +33,17 @@ set splitbelow
 " -------------------------------------------------------------------
 " Plugins
 " -------------------------------------------------------------------
-call plug#begin("~/.config/nvim/plugged")
- source ~/.config/nvim/plugins/dracula.vim
- source ~/.config/nvim/plugins/nerdcommenter.vim
- source ~/.config/nvim/plugins/vim-startify.vim
- source ~/.config/nvim/plugins/vim-fugitive.vim
- source ~/.config/nvim/plugins/nerdtree.vim
- source ~/.config/nvim/plugins/vim-airline.vim
- source ~/.config/nvim/plugins/floaterm.vim
- source ~/.config/nvim/plugins/fzf.vim
- source ~/.config/nvim/plugins/coc.vim
- source ~/.config/nvim/plugins/vim-devicons
+call plug#begin("~/.vim/plugged")
+ source ~/.vim/plugins/dracula.vim
+ source ~/.vim/plugins/nerdcommenter.vim
+ source ~/.vim/plugins/vim-startify.vim
+ source ~/.vim/plugins/vim-fugitive.vim
+ source ~/.vim/plugins/nerdtree.vim
+ source ~/.vim/plugins/vim-airline.vim
+ source ~/.vim/plugins/floaterm.vim
+ source ~/.vim/plugins/fzf.vim
+ source ~/.vim/plugins/coc.vim
+ source ~/.vim/plugins/vim-devicons
 call plug#end()
 
 " -------------------------------------------------------------------
@@ -72,7 +72,7 @@ let g:floaterm_keymap_prev   = '<Leader>tp'
 let g:floaterm_keymap_next   = '<Leader>tn'
 let g:floaterm_keymap_toggle = '<Leader>tt'
 
-if filereadable(expand("~/.config/nvim/local.vim"))
-    source ~/.config/nvim/local.vim
+if filereadable(expand("~/.vim/local.vim"))
+    source ~/.vim/local.vim
 endif
 
