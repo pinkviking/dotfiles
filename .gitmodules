@@ -2,6 +2,6 @@
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
-[submodule "zsh"]
+[submodule "zsh/zshtheme"]
 	path = zsh/zshtheme
 	url = https://github.com/dracula/zsh
