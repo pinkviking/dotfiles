@@ -70,7 +70,10 @@ ZSH_THEME="dracula"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+    git
+    zsh-kitty
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -116,4 +119,10 @@ export GOPATH=$HOME/Go
 # PATH
 # ---------------------------------------------
 export PATH=$HOME/Go/bin:$HOME/.bin:$PATH
+
+# ---------------------------------------------
+# Kitty specific
+# ---------------------------------------------
+if [ "$TERM" = "xterm-kitty" ]; then alias ssh="kitty +kitten ssh"; fi
+__kitty_complete
 

@@ -24,5 +24,6 @@
     ~/.fonts: fonts
     ~/.zshrc: zsh/zshrc
     ~/.oh-my-zsh/themes/dracula.zsh-theme: zsh/zshtheme/dracula.zsh-theme
+    ~/.oh-my-zsh/plugins/zsh-kitty: zsh/plugins/zsh-kitty
 
 

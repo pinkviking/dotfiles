@@ -43,4 +43,8 @@ export GOPATH=$HOME/Go
 # ----------------------------------------------------------
 export PATH=$HOME/Go/bin:$HOME/.bin:$PATH
 
+# ---------------------------------------------
+# Kitty specific
+# ---------------------------------------------
+if [ "$TERM" = "xterm-kitty" ]; then alias ssh="kitty +kitten ssh"; fi
 
