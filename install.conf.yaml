@@ -1,6 +1,7 @@
 ---
 - defaults:
     link:
+      create: true
       relink: true
 
 - clean: ['~']
@@ -19,6 +20,7 @@
     ~/.themes: themes
     ~/.config/kitty/kitty-themes/themes/Dracula.conf: kitty/Dracula.conf
     ~/.config/kitty/kitty.conf: kitty/kitty.conf
+    ~/.config/terminator/config: terminator.conf
     ~/.vimrc: vim/vimrc
     ~/.vim/plugins: vim/plugins
     ~/.fonts: fonts
