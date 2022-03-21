@@ -109,11 +109,22 @@ export EDITOR='/usr/bin/vim'
 export VISUAL='/usr/bin/vim'
 export GOPATH=$HOME/Go
 
+# ----------------------------------------------------------
+# Text styling
+# ----------------------------------------------------------
+#bold=$(tput bold)
+#underline=$(tput smul)
+#italic=$(tput sitm)
+#info=$(tput setaf 2)
+#error=$(tput setaf 160)
+#warn=$(tput setaf 214)
+#reset=$(tput sgr0)
+
 
 # ---------------------------------------------
 # Alias'
 # ---------------------------------------------
-
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # ---------------------------------------------
 # PATH

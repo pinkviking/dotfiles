@@ -68,6 +68,7 @@ map <Leader>nf :NERDTreeFocus<CR>
 noremap <Leader>ff :Files<CR>
 noremap <Leader>fw :Windows<CR>
 noremap <Leader>fb :Buffers<CR>
+noremap <Leader>fr :Rg<CR>
 
 map <Leader>j :tabr<CR>
 map <Leader>k :tabl<CR>
