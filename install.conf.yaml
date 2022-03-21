@@ -14,12 +14,11 @@
   - ~/.vim/plugged
   - ~/.config/kitty/kitty-themes/themes
   - ~/.oh-my-zsh/themes
+  - ~/bin
 
 - link:
     ~/.bashrc: bashrc
     ~/.themes: themes
-    ~/.config/kitty/kitty-themes/themes/Dracula.conf: kitty/Dracula.conf
-    ~/.config/kitty/kitty.conf: kitty/kitty.conf
     ~/.config/terminator/config: terminator.conf
     ~/.vimrc: vim/vimrc
     ~/.vim/plugins: vim/plugins
@@ -27,5 +26,6 @@
     ~/.zshrc: zsh/zshrc
     ~/.oh-my-zsh/themes/dracula.zsh-theme: zsh/zshtheme/dracula.zsh-theme
     ~/.oh-my-zsh/plugins/zsh-kitty: zsh/plugins/zsh-kitty
+    ~/bin/waitforit: bin/waitforit
 
 
