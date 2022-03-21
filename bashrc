@@ -51,15 +51,10 @@ export GOPATH=$HOME/Go
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 
-
 # ----------------------------------------------------------
 # PATH
 # ----------------------------------------------------------
 export PATH=$HOME/Go/bin:$HOME/.bin:$PATH
 
-# ---------------------------------------------
-# Kitty specific
-# ---------------------------------------------
-if [ "$TERM" = "xterm-kitty" ]; then alias ssh="kitty +kitten ssh"; fi
-
 . "$HOME/.cargo/env"
+
