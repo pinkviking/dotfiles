@@ -7,7 +7,7 @@ notify=$(test "$3" = "notify" && echo 1)
 frames="/ | \ \ -"
 
 
-while kill -0 $pid 2>&1 > /dev/null;
+while kill -0 $pid &> /dev/null;
 do
     for frame in $frames;
     do
