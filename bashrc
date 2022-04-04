@@ -58,3 +58,9 @@ export PATH=$HOME/Go/bin:$HOME/.bin:$PATH
 
 . "$HOME/.cargo/env"
 
+
+
+if [ -f ~/.config/bashrc.local ]; then
+    source ~/.config/bashrc.local
+fi
+

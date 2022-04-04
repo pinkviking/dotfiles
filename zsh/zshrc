@@ -131,9 +131,8 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # ---------------------------------------------
 export PATH=$HOME/Go/bin:$HOME/.bin:$PATH
 
-# ---------------------------------------------
-# Kitty specific
-# ---------------------------------------------
-if [ "$TERM" = "xterm-kitty" ]; then alias ssh="kitty +kitten ssh"; fi
-__kitty_complete
+if [ -f ~/.config/zshrc.local ]; then
+    source ~/.config/zshrc.local
+fi
+
 
