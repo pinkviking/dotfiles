@@ -86,3 +86,5 @@ endif
 
 set t_RV=
 
+map <Leader>nh :nohl<CR>
+
