@@ -135,4 +135,8 @@ if [ -f ~/.config/zshrc.local ]; then
     source ~/.config/zshrc.local
 fi
 
+if [ -f ~/.cargo/env ]; then
+    . "$HOME/.cargo/env"
+fi
+
 

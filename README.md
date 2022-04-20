@@ -4,7 +4,7 @@ Heima er best.
 
 ## Init
 
-* Install packages [zsh, vim, kitty, nodejs]
+* Install packages [zsh, vim, nodejs]
 * Run `./install`
 * vim config:
     * `:PlugInstall` # Install Plugins

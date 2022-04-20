@@ -56,7 +56,9 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # ----------------------------------------------------------
 export PATH=$HOME/Go/bin:$HOME/.bin:$PATH
 
-. "$HOME/.cargo/env"
+if [ -f ~/.cargo/env ]; then
+    . "$HOME/.cargo/env"
+fi
 
 
 
