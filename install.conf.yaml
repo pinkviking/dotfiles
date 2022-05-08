@@ -12,7 +12,6 @@
 
 - create:
   - ~/.vim/plugged
-  - ~/.config/kitty/kitty-themes/themes
   - ~/.oh-my-zsh/themes
   - ~/bin
 
@@ -25,7 +24,7 @@
     ~/.fonts: fonts
     ~/.zshrc: zsh/zshrc
     ~/.oh-my-zsh/themes/dracula.zsh-theme: zsh/zshtheme/dracula.zsh-theme
-    ~/.oh-my-zsh/plugins/zsh-kitty: zsh/plugins/zsh-kitty
     ~/bin/waitforit: bin/waitforit
+    ~/.config/awesome: awesome
 
 

@@ -1,3 +1,5 @@
 *.swp
 /windows/init.vim
 
+/themes/gnome-professional-40.1/*
+
