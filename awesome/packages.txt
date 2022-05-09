@@ -2,3 +2,4 @@ picom
 xinput
 dmenu
 rofi
+i3lock

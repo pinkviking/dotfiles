@@ -343,9 +343,14 @@ globalkeys = gears.table.join(
     -- Menubar
      awful.key({ modkey }, "p",
         function() awful.spawn("rofi -modi drun -show drun -show-icons -width 22 -no-click-to-exit") end,
-        {description = "show the menubar (rofi)", group = "launcher"})
+        {description = "show the menubar (rofi)", group = "launcher"}),
     -- awful.key({ modkey }, "p", function() menubar.show() end,
     --           {description = "show the menubar", group = "launcher"})
+   
+    -- Screen lock
+     awful.key({ modkey, "Mod1" }, "l",
+        function() awful.spawn("i3lock -i " .. home .. "/.themes/wallpaper/wallp.png -t -f") end,
+        {description = "lock screen", group = "awesome" })
 )
 
 clientkeys = gears.table.join(
