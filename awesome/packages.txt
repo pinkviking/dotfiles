@@ -3,3 +3,5 @@ xinput
 dmenu
 rofi
 i3lock
+playerctl
+alacritty

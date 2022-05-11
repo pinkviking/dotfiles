@@ -15,4 +15,7 @@ if [ -f ~/.bashrc ]; then
     if [ ! -L ~/.bashrc ]; then rm ~/.bashrc; fi
 fi
 
+if [ ! -L ~/.config/alacritty ]; then
+    rm -rf ~/.config/alacritty
+fi
 
