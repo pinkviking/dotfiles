@@ -1,7 +1,7 @@
 local gears = require("gears")
 local awful = require("awful")
 
-
+RC.autorun.add("playerctld daemon")
 
 local keybindings = gears.table.join(
     -- play/pause
@@ -24,6 +24,10 @@ local keybindings = gears.table.join(
         function () awful.spawn("playerctl previous") end,
         { description = "previous", group = "media" })
 )
+
+awesome.connect_signal("exit", function ()
+    awful.spawn("pkill playerctld") 
+end)
 
 return {
     keybindings = keybindings
