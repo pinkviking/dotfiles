@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if command -v dnf &> /dev/null
+then
+    sudo dnf install $(cat ./awesome/packages.txt)
+fi
+
 # Install Oh-My-Zsh
 if [ "$ZSH" == "" -a -f "/bin/bash" ]; then
     rm -rf ~/.oh-my-zsh

@@ -36,6 +36,9 @@ local main = {
     rules = require("main.rules")
 }
 
+local binding = {
+    globalbuttons = require("binding.globalbuttons")
+}
 
 -- Layouts
 RC.layouts = main.layouts
@@ -51,10 +54,11 @@ RC.launcher = awful.widget.launcher(
 menubar.utils.terminal = RC.vars.terminal -- Set the terminal for applications that require it
 
 -- Rules
-awful.rules.rules = main.rules(clientkeys, clientbuttons)
 
 -- Signals
 require("main.signals")
+
+-- Bindings
 
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init(RC.vars.confdir .. "/theme.lua")
@@ -176,11 +180,7 @@ end)
 -- }}}
 
 -- {{{ Mouse bindings
-root.buttons(gears.table.join(
-    awful.button({ }, 3, function () RC.mainmenu:toggle() end),
-    awful.button({ }, 4, awful.tag.viewnext),
-    awful.button({ }, 5, awful.tag.viewprev)
-))
+root.buttons(binding.globalbuttons())
 -- }}}
 
 -- {{{ Key bindings
@@ -399,6 +399,9 @@ for i = 1, 9 do
 end
 
 clientbuttons = gears.table.join(
+    awful.button({ RC.vars.modkey }, 5, function () awful.tag.viewnext(awful.screen.focused()) end),
+    awful.button({ RC.vars.modkey }, 4, function () awful.tag.viewprev(awful.screen.focused()) end),
+
     awful.button({ }, 1, function (c)
         c:emit_signal("request::activate", "mouse_click", {raise = true})
     end),
@@ -411,6 +414,8 @@ clientbuttons = gears.table.join(
         awful.mouse.client.resize(c)
     end)
 )
+
+awful.rules.rules = main.rules(clientkeys, clientbuttons)
 
 -- Set keys
 root.keys(globalkeys)
@@ -441,4 +446,5 @@ end
 awesome.connect_signal("exit", function ()
     awful.spawn("pkill playerctld") 
 end)
+
 
