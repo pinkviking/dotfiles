@@ -2,6 +2,6 @@ picom
 xinput
 dmenu
 rofi
-i3lock
 playerctl
 alacritty
+i3lock-color
