@@ -1,3 +1,4 @@
+awesome
 picom
 xinput
 dmenu

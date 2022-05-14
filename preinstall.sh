@@ -3,7 +3,7 @@
 if command -v dnf &> /dev/null
 then
     if [ -z "$(dnf copr list | grep i3lock-color)" ]; then
-        sudo copr enable tokariew/i3lock-color -y
+        sudo dnf copr enable tokariew/i3lock-color -y
     fi
     sudo dnf install $(cat ./awesome/packages.txt) -y
 fi
