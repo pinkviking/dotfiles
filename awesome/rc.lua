@@ -21,8 +21,9 @@ RC.autorun = require("main.autorun")
 modkey = RC.vars.modkey
 
 -- Init config
-beautiful.init(RC.vars.confdir .. "/theme.lua")
-beautiful.useless_gap = 5
+beautiful.init(RC.vars.confdir .. "/themes/theme.lua")
+-- beautiful.useless_gap = 5
+print(beautiful.wallpaper)
 
 -- Error handling
 require("main.error-handling")
@@ -52,7 +53,7 @@ RC.tags = main.tags()
 -- Menu
 RC.mainmenu = awful.menu({ items = main.menu() })
 RC.launcher = awful.widget.launcher(
-    { image = RC.icons.menu, menu = RC.mainmenu }
+    { image = beautiful.awesome_icon, menu = RC.mainmenu }
 )
 menubar.utils.terminal = RC.vars.terminal -- Set the terminal for applications that require it
 
