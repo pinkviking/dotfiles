@@ -78,7 +78,7 @@ require("deco.statusbar")
 -- Autorun programs
 RC.autorun.add(RC.scripts.init)
 RC.autorun.add("picom")
-RC.autorun.add("xautolock -time 10 -locker " .. RC.scripts.locker)
+RC.autorun.add("xautolock -corners 000-  -time 10 -locker " .. RC.scripts.locker)
 
 RC.autorun.run()
 
