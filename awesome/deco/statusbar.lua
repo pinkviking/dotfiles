@@ -13,6 +13,8 @@ local deco = {
 local taglist_buttons   = deco.taglist()
 local tasklist_buttons  = deco.tasklist() 
 
+
+
 mytextclock = wibox.widget.textclock()
 mykeyboardlayout = awful.widget.keyboardlayout()
 
@@ -58,18 +60,23 @@ awful.screen.connect_for_each_screen(function(s)
         filter  = awful.widget.tasklist.filter.currenttags,
         buttons = tasklist_buttons
     }
+
+    -- Launcher Margin
+    s.mylauncher = wibox.container.margin(RC.launcher, 6, 6, 0 ,0) 
+
     -- Create the wibox
     s.mywibox = awful.wibar({ 
         position = "top",
         screen = s,
         height = 24
     })
+
     -- Add widgets to the wibox
     s.mywibox:setup {
         layout = wibox.layout.align.horizontal,
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
-            RC.launcher,
+            s.mylauncher,
             s.mytaglist,
             s.mypromptbox
         },
