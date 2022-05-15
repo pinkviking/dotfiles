@@ -6,3 +6,5 @@ rofi
 playerctl
 alacritty
 i3lock-color
+xautolock
+

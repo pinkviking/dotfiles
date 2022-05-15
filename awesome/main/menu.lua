@@ -17,7 +17,7 @@ M.awesome = {
 function _M.get()
     local menu_items = {
         { "awesome", M.awesome, beautiful.awesome_subicon },
-        { "open terminal", RC.terminal }
+        { "open terminal", RC.vars.terminal }
     }
 
     return menu_items

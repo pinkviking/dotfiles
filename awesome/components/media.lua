@@ -22,7 +22,18 @@ local keybindings = gears.table.join(
     -- prev
     awful.key({ "Control", "Mod1" }, "b",
         function () awful.spawn("playerctl previous") end,
+        { description = "previous", group = "media" }),
+
+    -- next
+    awful.key({ }, "XF86AudioNext",
+        function () awful.spawn("playerctl next") end,
+        { description = "next", group = "media" }),
+
+    -- prev
+    awful.key({ }, "XF86AudioPrev",
+        function () awful.spawn("playerctl previous") end,
         { description = "previous", group = "media" })
+
 )
 
 awesome.connect_signal("exit", function ()

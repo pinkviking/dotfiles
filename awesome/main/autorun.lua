@@ -11,7 +11,7 @@ end
 function _M.run() 
     if autorun then 
         for cmd = 1, #autorunCommands do
-            awful.util.spawn(autorunCommands[cmd])
+            awful.spawn(autorunCommands[cmd])
         end
     end
 end

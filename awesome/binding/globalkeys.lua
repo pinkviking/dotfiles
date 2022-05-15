@@ -127,7 +127,7 @@ function _M.get()
     -- Screen lock
     awful.key({ modkey, "Mod1" }, "l",
         function()
-            awful.spawn(RC.vars.confdir .. "/scripts/screenlock.sh")
+            awful.spawn(RC.scripts.locker)
         end,
         {description = "lock screen", group = "awesome" }),
     

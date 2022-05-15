@@ -15,9 +15,10 @@ local menubar = require("menubar")
 
 -- Global namespace
 RC = {}
-RC.vars = require("main.user-variables")
-RC.icons = require("main.icons")
-RC.autorun = require("main.autorun")
+RC.vars     = require("main.user-variables")
+RC.icons    = require("main.icons")
+RC.autorun  = require("main.autorun")
+RC.scripts  = require("main.scripts")
 modkey = RC.vars.modkey
 
 -- Init config
@@ -31,9 +32,9 @@ require("main.error-handling")
 -- Custom Local Library
 local main = {
     layouts = require("main.layouts"),
-    tags = require("main.tags"),
-    menu = require("main.menu"),
-    rules = require("main.rules")
+    tags    = require("main.tags"),
+    menu    = require("main.menu"),
+    rules   = require("main.rules"),
 }
 
 local binding = {
@@ -75,8 +76,9 @@ require("main.signals")
 require("deco.statusbar")
 
 -- Autorun programs
-RC.autorun.add(RC.vars.confdir .. "/scripts/setupsession.sh")
+RC.autorun.add(RC.scripts.init)
 RC.autorun.add("picom")
+RC.autorun.add("xautolock -time 10 -locker " .. RC.scripts.locker)
 
 RC.autorun.run()
 
