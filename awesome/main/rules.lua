@@ -55,8 +55,12 @@ function _M.get(clientkeys, clientbuttons)
           }, properties = { titlebars_enabled = false }
         },
 
+        -- Application specific rules
         { rule = { name = "Google Chrome" },
           properties = { tag = "www" } },
+        { rule = { class = "[Ss]potify" },
+          properties = { tag = "media" } },
+
         -- Set Firefox to always map on the tag named "2" on screen 1.
         -- { rule = { class = "Firefox" },
         --   properties = { screen = 1, tag = "2" } },
