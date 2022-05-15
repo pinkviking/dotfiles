@@ -11,7 +11,7 @@ i3lock \
 --separator-color=282828FF \
 --line-color=BD93F9FF \
 --keyhl-color=FF79C6FF \
---bshl-color=FB4934FF \
+--bshl-color=F1FA8CFF \
 --ring-width=4 \
 --radius=32 \
 --ind-pos="x+w/2:y+h/2" \
