@@ -52,6 +52,9 @@ awful.screen.connect_for_each_screen(function(s)
             widget  = wibox.container.background
         }
     }
+    s.mytaglistcontainer = wibox.container.margin(
+        s.mytaglist, 2, 10)
+        
     -- Create a tasklist widget
     s.mytasklist = awful.widget.tasklist {
         screen  = s,
@@ -120,7 +123,7 @@ awful.screen.connect_for_each_screen(function(s)
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
             s.mylauncher,
-            s.mytaglist,
+            s.mytaglistcontainer,
             s.mypromptbox,
         },
         s.mytasklist, -- Middle widget
