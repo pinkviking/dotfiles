@@ -60,6 +60,9 @@ function _M.get(clientkeys, clientbuttons)
           properties = { tag = "www" } },
         { rule = { class = "[Ss]potify" },
           properties = { tag = "media" } },
+        { rule = { name = "Evolution", instance = "evolution"  },
+          properties = { tag = "mail" } },
+
 
         -- Set Firefox to always map on the tag named "2" on screen 1.
         -- { rule = { class = "Firefox" },
