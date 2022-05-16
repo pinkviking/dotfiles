@@ -17,7 +17,9 @@ local function check_unread()
         RC.scripts.mailwatch .. " check",
         function(stdout, stderr)
             if string.len(stderr) > 0 then
-                naughty.notify("Mailwatch err: " .. stderr)
+                naughty.notify({
+                    text = "Mailwatch err: " .. stderr
+                })
             else
                 local numvalue = tonumber(stdout) 
                 if numvalue > 0 then
