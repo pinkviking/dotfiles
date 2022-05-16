@@ -1,6 +1,8 @@
 local awful = require("awful")
 local beautiful = require("beautiful")
 
+local app_evolution = require("applications.evolution")
+
 local _M = {}
 
 function _M.get(clientkeys, clientbuttons)
@@ -61,7 +63,8 @@ function _M.get(clientkeys, clientbuttons)
         { rule = { class = "[Ss]potify" },
           properties = { tag = "media" } },
         { rule = { name = "Evolution", instance = "evolution"  },
-          properties = { tag = "mail" } },
+          properties = { tag = "mail" },
+          callback = app_evolution.signal_connect},
 
 
         -- Set Firefox to always map on the tag named "2" on screen 1.

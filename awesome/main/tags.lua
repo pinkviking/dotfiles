@@ -10,33 +10,33 @@ function _M.get ()
     awful.screen.connect_for_each_screen(function(s)
         local taglist = {}
         table.insert(taglist, awful.tag.add("main", {
-            icon = iconsd .. "terminal.png",
+            icon = RC.icons.tag_main,
             layout = RC.layouts[1],
             screen = s,
             selected = true,
         }))
         table.insert(taglist, awful.tag.add("www", {
-            icon = iconsd .. "browser.png",
+            icon = RC.icons.tag_www, 
             layout = RC.layouts[1],
             screen = s,
         }))
         table.insert(taglist, awful.tag.add("media", {
-            icon = iconsd .. "media.png",
+            icon = RC.icons.tag_media, 
             layout = RC.layouts[1],
             screen = s,
         }))
         table.insert(taglist, awful.tag.add("mail", {
-            icon = iconsd .. "mail.png",
+            icon = RC.icons.tag_mail, 
             layout = RC.layouts[1],
             screen = s,
         }))
         table.insert(taglist, awful.tag.add("im", {
-            icon = iconsd .. "message.png",
+            icon = RC.icons.tag_im, 
             layout = RC.layouts[1],
             screen = s,
         }))
         table.insert(taglist, awful.tag.add("etc", {
-            icon = iconsd .. "ellipsis.png",
+            icon = RC.icons.tag_etc,
             layout = RC.layouts[1],
             screen = s,
         }))
