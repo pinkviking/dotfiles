@@ -1,17 +1,39 @@
+local gears = require("gears")
+local awful = require("awful")
+local naughty = require("naughty")
 
 local _M = {}
 
-function _M.signal_connect(c)
-    local function set_mail_icon(c)
-        if string.find(c.name, "unread") ~= nil then
-            c.first_tag.icon = RC.icons.tag_gotmail
-        else
-            c.first_tag.icon = RC.icons.tag_mail
-        end
+
+
+local function set_mail_icon(icon)
+    for s in screen do
+        awful.tag.find_by_name(s, "mail").icon = icon
     end
-    set_mail_icon(c)
-    c:connect_signal("property::name", set_mail_icon)
 end
 
+local function check_unread()
+    awful.spawn.easy_async(
+        RC.scripts.mailwatch .. " check",
+        function(stdout, stderr)
+            if string.len(stderr) > 0 then
+                naughty.notify("Mailwatch err: " .. stderr)
+            else
+                local numvalue = tonumber(stdout) 
+                if numvalue > 0 then
+                    set_mail_icon(RC.icons.tag_gotmail)
+                else
+                    set_mail_icon(RC.icons.tag_mail)
+                end
+            end
+        end)
+end
+
+gears.timer{
+    timeout = 60,
+    call_now = true,
+    autostart = true,
+    callback  = check_unread
+}
 
 return _M

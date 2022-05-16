@@ -25,6 +25,7 @@
     ~/.zshrc: zsh/zshrc
     ~/.oh-my-zsh/themes/dracula.zsh-theme: zsh/zshtheme/dracula.zsh-theme
     ~/bin/waitforit: bin/waitforit
+    ~/bin/mailwatch: awesome/scripts/mailwatch.py
     ~/.config/awesome: awesome
     ~/.config/alacritty: alacritty
 

@@ -7,4 +7,5 @@ playerctl
 alacritty
 i3lock-color
 xautolock
+python3-keyring
 
