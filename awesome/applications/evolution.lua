@@ -4,7 +4,7 @@ local _M = {}
 function _M.signal_connect(c)
     local function set_mail_icon(c)
         if string.find(c.name, "unread") ~= nil then
-            c.first_tag.icon = RC.icons.launcher
+            c.first_tag.icon = RC.icons.tag_gotmail
         else
             c.first_tag.icon = RC.icons.tag_mail
         end
