@@ -32,7 +32,7 @@ local function check_unread()
 end
 
 gears.timer{
-    timeout = 60,
+    timeout = 300,
     call_now = true,
     autostart = true,
     callback  = check_unread
