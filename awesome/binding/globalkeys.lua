@@ -144,8 +144,11 @@ function _M.get()
 
     awful.key({ modkey }, "e", function()
         awful.spawn(RC.vars.terminal .." -e neomutt")
-    end)
+    end),
 
+    awful.key({ "Mod1", "Control", "Shift" }, "a", function()
+        awful.spawn("autorandr --change")
+    end)
 
     )
     return globalkeys

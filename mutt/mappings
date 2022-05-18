@@ -50,9 +50,9 @@ bind editor <Tab> complete-query
 bind editor ^T complete
 
 # Press A to add contact to Khard address book
-macro index,pager A \
-    "<pipe-message>khard add-email<return>" \
-    "add the sender email address to khard"
+#macro index,pager A \
+#    "<pipe-message>khard add-email<return>" \
+#    "add the sender email address to khard"
 
 ## Shortcuts
 #macro index,pager <f2> '<sync-mailbox><enter-command>source ~/.mutt/accounts/gmail<enter><change-folder>!<enter>'
