@@ -5,11 +5,12 @@
 # application/vnd.oasis.opendocument.text; ~/dotfiles/office/view-attachment.sh %s "-" '/Applications/LibreOffice.app'
 
 # HTML
+text/html; xdg-open '%s' &; nametemplate=%s.html; test=test -n "$DISPLAY"; 
 text/html; w3m -I %{charset} -T text/html; copiousoutput;
 text/plain; vim %s
 
 #PDFs
-# application/pdf; /usr/bin/zathura %s pdf
+application/pdf; xdg-open %s
 
 #Images
 image/png; /usr/bin/feh %s

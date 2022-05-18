@@ -9,7 +9,7 @@ set imap_check_subscribed
 
 # Set preferred view modes
 auto_view text/html text/calendar application/ics #view html automatically
-alternative_order text/html text/plain text/enriched text/*
+alternative_order text/plain text/enriched text/html 
 
 
 # Main option
