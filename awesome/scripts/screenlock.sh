@@ -1,7 +1,7 @@
 #!/bin/sh
 i3lock \
 --color=282828 \
---blur=5 \
+--blur=10 \
 --inside-color=282828FF \
 --insidever-color=282828FF \
 --insidewrong-color=282828FF \

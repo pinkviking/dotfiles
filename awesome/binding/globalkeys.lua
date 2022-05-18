@@ -140,11 +140,14 @@ function _M.get()
     awful.key({ }, "XF86MonBrightnessUp",
         function () awful.spawn("brightnessctl set +10%") end),
     awful.key({ }, "XF86MonBrightnessDown",
-        function () awful.spawn("brightnessctl set 10%-") end)
+        function () awful.spawn("brightnessctl set 10%-") end),
+
+    awful.key({ modkey }, "e", function()
+        awful.spawn(RC.vars.terminal .." -e neomutt")
+    end)
 
 
     )
-
     return globalkeys
 end
 
