@@ -17,7 +17,7 @@ theme.bg_normal     = colors.background
 theme.bg_focus      = colors.purple
 theme.bg_urgent     = colors.yellow
 theme.bg_minimize   = colors.background_focused
-theme.bg_systray    = colors.comment
+theme.bg_systray    = colors.background
 
 theme.fg_normal     = colors.foreground 
 theme.fg_focus      = colors.foreground 

@@ -33,6 +33,7 @@ set text_flowed
 set tmpdir = ~/.mutt/tmp
 set hidden_host
 set hostname = "redacted"
+set mime_forward
 
 #unset confirmappend                     # Don't ask just do!
 set quit                                # Don't ask just do

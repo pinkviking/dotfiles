@@ -3,7 +3,7 @@ local awful = require("awful")
 local hotkeys_popup = require("awful.hotkeys_popup")
 local menubar = require("menubar")
 
-local volume = require("components.volume")
+local volume = require("components.volume.volume")()
 local media = require("components.media")
 
 local modkey = RC.vars.modkey

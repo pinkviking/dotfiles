@@ -13,6 +13,8 @@ local deco = {
 local taglist_buttons   = deco.taglist()
 local tasklist_buttons  = deco.tasklist() 
 
+local volume_widget = require("components.volume.volume")()
+
 
 
 mytextclock = wibox.widget.textclock()
@@ -130,6 +132,7 @@ awful.screen.connect_for_each_screen(function(s)
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
             mykeyboardlayout,
+            volume_widget,
             wibox.widget.systray(),
             mytextclock,
             s.mylayoutbox,
