@@ -16,6 +16,7 @@
   - ~/bin
 
 - link:
+    # Main
     ~/.bashrc: bashrc
     ~/.themes: themes
     ~/.config/terminator/config: terminator.conf
@@ -25,8 +26,14 @@
     ~/.zshrc: zsh/zshrc
     ~/.oh-my-zsh/themes/dracula.zsh-theme: zsh/zshtheme/dracula.zsh-theme
     ~/bin/waitforit: bin/waitforit
-    ~/bin/mailwatch: awesome/scripts/mailwatch.py
+    # Awesome
     ~/.config/awesome: awesome
+    ~/bin/mailwatch: awesome/scripts/mailwatch.py
     ~/.config/alacritty: alacritty
+    # Mutt
+    ~/.mutt/settings: mutt/settings
+    ~/.mutt/colors: mutt/colors
+    ~/.mutt/mappings: mutt/mappings
+    ~/.mutt/mailcap: mutt/mailcap
 
 
